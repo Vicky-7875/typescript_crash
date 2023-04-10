@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>js</title>
-    <script src="function_type.js"></script>
-</head>
-<body>
-    
-</body>
+    <!-- <script src="function_type.js"></script> -->
+    <!-- <script src="class_defination.js"></script> -->
+    <!-- <script src="class_inheritance.js"></script> -->
+    <!-- <script src="module_runner.js"></script> -->
+    <script src="node_modules/systemjs/dist/system.js"></script>
+  </head>
+  <body>
+    <script>
+      SystemJS.config({
+        baseURL: "/",
+        packages: {
+          "/": {
+            defaultExtension: "js",
+          },
+        },
+      });
+
+      SystemJS.import('app.js')
+    </script>
+    <!-- <script>
+      var myNameSpace = (function () {
+        return {
+          displData: function () {
+            console.log("this is my space,get out");
+          },
+        };
+      })();
+
+      myNameSpace.displData()
+    </script> -->
+  </body>
 </html>
